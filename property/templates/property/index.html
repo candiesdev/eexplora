@@ -1,0 +1,16 @@
+{% extends propertyBase %}
+{% block title %}eExplora Negocios Inmobiliarios{% endblock %}
+{% block siteLogo %}<p>eExplora.com</p>{% endblock %}
+
+{% block navMenu %}
+{% endblock %}
+
+{% block content %}
+
+{% if propCode %}
+{% include "property/blocksTemplate.html" %}
+{% else %}
+{% include "property/propertyIndex.html" %}
+{% endif %}
+
+{% endblock %}
