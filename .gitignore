@@ -2,7 +2,7 @@ personalnotes.txt
 eexploraenv/
 codernotes/
 db.sqlite3
-.png
-.jpg
-.jpeg
-.gif
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.gif
