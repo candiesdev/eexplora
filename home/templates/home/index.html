@@ -1,17 +1,17 @@
-{% extends baseHome %}
-{% block title %}eExplora Negocios Inmobiliarios{% endblock %}
-{% block siteLogo %}<p>eExplora.com</p>{% endblock %}
+{% extends "./eexploraBase.html" %} <!-- Cambiar a variable -->
 
-{% block navMenu %}
+{% block head %}
+  {% include "./eexploraHead.html" %} <!-- Cambiar a variable -->
 {% endblock %}
 
-{% block content %}
-<div class="heroImg">
-  <div class="heroText1">
-    <p>Comunidad</p>
-  </div>
-  <div class="heroText2">
-    <p>Inmobiliaria</p>
-  </div>
-</div>
+{% block header %}
+    {% include "./eexploraHeader.html" %}
+{% endblock %}
+
+{% block main %}
+    {% include "./eexploraMain.html" %}
+{% endblock %}
+
+{% block footer %}
+    {% include "./eexploraFooter.html" %}
 {% endblock %}

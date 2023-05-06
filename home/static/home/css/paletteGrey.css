@@ -1,0 +1,12 @@
+:root {
+    --body--bgcolor: #3C3F41;
+    --header--bgcolor: #3C3F41;
+    --footer--bgcolor: #3C3F41;
+    --button--color: #f0f4f7;
+    --border--color: #f0f4f7;
+    --important--txtcolor: #565CA6;
+    --clear--txtcolor: #f0f4f7;
+    --AAA--txtcolor: #fafbfc;
+    --AA--txtcolor: #e4e8eb;
+    --link-color: #fafbfc;
+}

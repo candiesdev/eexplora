@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    background-color: var(--body--bgcolor);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    margin: 0;
+    border: 0;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    list-style-type: none;
+}
+
+.logoText {
+    font-size: 3.2rem;
+    color: var(--logo--color);
+}
+
+.navOl {
+    list-style-type: none;
+}
+
+.menuBtn {
+    background-color: var(--linkbtn--color);
+    color: var(--AA--txtcolor);
+    cursor: pointer;
+    height: 3rem;
+    border: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 2.5rem;
+}
+
+.greyBtn {
+    background-color: var(--linkbtn--color);
+    color: var(--AA--txtcolor);
+    cursor: pointer;
+    width: 80%;
+    height: 4rem;
+    border: 0;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 2.5rem;
+}
+
+.regularFooter {
+    width: 100%;
+    text-align: center;
+    background-color: var(--body--bgcolor);
+    padding: 2rem;
+}
+
+.fixedFooter {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--body--bgcolor);
+    padding: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--AAA--txtcolor);
+}
+
+p {
+    color: var(--AA--txtcolor);
+}
+
+a {
+    text-decoration: none;
+    text-decoration: underline;
+    color: var(--link--txtcolor);
+}
+
+@media (min-width: 600px) {
+    main {
+        max-width: 120rem;
+        margin: 0 auto;
+    }
+}
