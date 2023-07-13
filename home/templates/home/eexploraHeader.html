@@ -1,19 +1,20 @@
 {% load static %}
 <header>
 
-    <div>
-        <p class="logoText">eExplora.com</p>
-    </div>
+    {% block headerLogo %}
+        {% include "./eexploraHeaderLogo.html" %}
+    {% endblock %}
+
     <section class="navMenu">
         <nav>
             <ol class="navOl">
                 <li>
                 {% if loggedIn %}
-                <button class="menuBtn" onclick="location.href='./usr/?action=logout&prev=/'">
+                <button class="menuBtn" onclick="location.href='/usr/?action=logout&prev={{ prev }}'">
                 Cerrar Sesión
                 </button>
                 {% else %}
-                <button class="menuBtn" onclick="location.href='./usr/?action=login&prev=/'">
+                <button class="menuBtn" onclick="location.href='/usr/?action=login&prev={{ prev }}'">
                 Iniciar Sesi&#xf3;n
                 {% endif %}
                 </button></li>

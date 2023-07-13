@@ -18,6 +18,7 @@ def index(request):
     appData = {}
     activeApp = True
     appStyle = "/home/css/homebase.css"
+    prev = "/"
     appData.update({
         "activeApp": activeApp,
         "appStyle": appStyle,
@@ -25,6 +26,7 @@ def index(request):
         "userId": userId,
         "baseHome": "home/baseHome.html",
         "colorPalette": colorPalette,
+        "prev": prev,
     })
 
     return render(request, "home/index.html", appData)

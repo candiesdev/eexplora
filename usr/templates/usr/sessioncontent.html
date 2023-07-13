@@ -1,7 +1,7 @@
 <header>
-  <div class="logoText">
-    {% block siteLogo %}
-    <p>eExplora.com</p>
+  <div>
+    {% block headerLogo %}
+        {% include "home/eexploraHeaderLogo.html" %}
     {% endblock %}
   </div>
   <section class="navMenu">
@@ -9,8 +9,8 @@
       </nav>
   </section>
 </header>
-<main>
 
+<main>
   {% if sessionTemplate == "userInfo" %}
   <section id="formContainer">
     <h3>Información del usuario</h3>
@@ -21,7 +21,7 @@
   <section  class="sessionMenu">
     <ul>
     {% for key, value in sessionMenu.items %}
-      <li><a href="{{ value }}" class="formLinks">{{ key }}</a></li>
+      <li><a class="regularLink" href="{{ value }}" class="formLinks">{{ key }}</a></li>
     {% endfor %}
     </ul>
   </section>
@@ -30,7 +30,7 @@
   <section  class="sessionMenu">
     <ul>
     {% for key, value in sessionMenu.items %}
-      <li><a href="{{ value }}" class="formLinks">{{ key }}</a></li>
+      <li><a class="regularLink" href="{{ value }}" class="formLinks">{{ key }}</a></li>
     {% endfor %}
     </ul>
   </section>
@@ -50,9 +50,9 @@
   </section>
   <section class="sessionMenu">
     {% if sessionTemplate == "userPass" %}
-    <li><a href="/usr?action=login&prev={{ prev }}" class="formLinks">Cambiar usuario</a></li>
+    <li><a class="regularLink" href="/usr?action=login&prev={{ prev }}" class="formLinks">Cambiar usuario</a></li>
     {% endif %}
-    <li><a href="{{ prev }}" class="formLinks">Cancelar</a></li>
+    <li><a class="regularLink" href="{{ prev }}" class="formLinks">Cancelar</a></li>
     </ul>
   </section>
 
@@ -62,7 +62,7 @@
     {% if alert == "user_error"%}
     <p>Usuario&nbsp;<b>{{ userId }}</b>&nbsp;inexistente</p>
     {% endif %}
-    <a href="/usr?action=login&prev={{ prev }}">Reintentar</a>
+    <a class="regularLink" href="/usr?action=login&prev={{ prev }}">Reintentar</a>
   </section>
 
 {% elif sessionTemplate == "passwordError" %}
@@ -71,12 +71,12 @@
     {% if alert == "password_error"%}
     <p>Contraseña inválida</p>
     {% endif %}
-    <a href="/usr?action=login&prev={{ prev }}">Reintentar</a>
+    <a class="regularLink" href="/usr?action=login&prev={{ prev }}">Reintentar</a>
   </section>
 
 {% else %}
   <section>
-    <a href="/home/">Salir de la aplicación</a>
+    <a class="regularLink" href="/home/">Salir de la aplicación</a>
   </section>
 
 {% endif %}

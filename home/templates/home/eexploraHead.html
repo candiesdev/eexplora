@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="{% static 'home/css/palettePink.css' %}" />
     {% elif colorPalette == "paletteBlue" %}
     <link rel="stylesheet" href="{% static 'home/css/paletteBlue.css' %}" />
-    {% else %}
+    {% elif colorPalette == "paletteDark" %}
     <link rel="stylesheet" href="{% static 'home/css/paletteDark.css' %}" />
+    {% else %}
+    <link rel="stylesheet" href="{% static 'home/css/paletteeEBasic.css' %}" />
     {% endif %}
 
     <link rel="stylesheet" href="{% static 'home/css/defaultbase.css' %}" />

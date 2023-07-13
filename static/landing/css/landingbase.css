@@ -1,0 +1,45 @@
+:root {
+    --mainTitle--color: #95190c;
+}
+
+.mainTitle {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background-color: #a0d2db;
+}
+
+.mainTitle h1, p {
+    color: var(--mainTitle--color);
+}
+
+.ldnFeatures {
+    width: 100%;
+    text-align: justify;
+    border: 0;
+    margin: 0;
+    padding: 1rem;
+}
+
+.ldnFeature {
+    color: var(--AA--txtcolor);
+}
+
+.ldnFeatures h2 {
+    text-align: center;
+}
+
+.ldnFeatures ul {
+    margin: 0 2rem;
+}
+.ldnFeatures li {
+    padding: 0.5rem 0;
+}
+
+@media (min-width: 600px) {
+    .ldnFeatures {
+        width: 50%;
+        height: 43rem;
+        max-height: 43rem;
+    }
+}

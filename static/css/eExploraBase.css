@@ -1,0 +1,77 @@
+/* GENERAL APPLICATION SETTING */
+
+/* Set Applications Basic Colors */
+:root {
+    --body--bgcolor: #f0f0f0;
+    --header--bgcolor: #1d4082;
+    --footer--bgcolor: #1d4082;
+    --form--buttoncolor: #1d4082;
+    --border--color: #808080;
+  }
+  
+  /* Set Application Shape */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    background-color: var(--body--bgcolor);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+  }
+  
+  
+  /* HEADER AND BODY */
+  
+  header {
+    width: 100%;
+    background-color: var(--header--bgcolor);
+  }
+  .logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 3.2rem;
+    padding: 0.5rem;
+    color: white;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  .boxMain {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .cardTitle {
+    padding: 0.5rem;
+  }
+/* STYLES FOR DESKTOP */
+@media (min-width: 600px) {
+  /* Resize boxes */
+  .container{
+    max-width: 1200px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .boxMain {
+    max-width: 50%;
+    width: 50%;
+  }
+  .boxTitle {
+    max-width: 100%;
+    width: 100%;
+  }
+  .boxDescription {
+    max-width: 100%;
+    width: 100%;
+  }
+  .boxSpecs {
+    max-width: 100%;
+    width: 100%;
+  }
+}
