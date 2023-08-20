@@ -1,0 +1,45 @@
+#ee-header-nav {
+    background-color: var(--header--bgcolor) !important;
+}
+#ee-header-nav img {
+    width: 30px;
+}
+.ee-textarea {
+    border: 2px solid var(--txtinput--bordercolor);
+    outline: none;
+}
+.ee-button {
+    background-color: var(--button--color);
+    border: 0;
+}
+.ee-button:hover {
+    background-color: var(--button--color);
+}
+.ee-textarea-light {
+    border: none;
+    outline: none;
+}
+.ee-button-light {
+    background-color: var(--button--color--light);
+    border: 0;
+}
+.ee-button-light:hover {
+    background-color: var(--button--color--light);
+}
+footer {
+    background: #044b7f;
+    text-decoration: none;
+    color: #fcfafc;
+
+}
+footer a {
+    color: #fcfafc;
+    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: white
+}
+@media (min-width: 992px) {
+    .carousel-item {
+        max-height: 330.66px;
+    }
+}

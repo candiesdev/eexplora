@@ -1,0 +1,26 @@
+/* landing palette */
+:root {
+    --property--price--color: #95190c;
+}
+/* landing styles */
+.ee-main-title {
+    color: var(--main--title--color);
+}
+.carousel-item {
+    max-height: 256px;
+    background-color: grey;
+}
+.ee-property-price, .ee-property-id {
+    color: var(--property--price--color);
+}
+#ee-property-features li {
+    border: none;
+}
+.ee-check-mark {
+    color: green;
+}
+@media (min-width: 992px) {
+    .carousel-item {
+        max-height: 330.66px;
+    }
+}

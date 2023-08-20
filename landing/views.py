@@ -1,13 +1,21 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .contentData import landing, property, agent
 
 # Create your views here.
 
 def landingViews(request):
-    if "palette" in request.GET:
-        colorPalette = "palette" + request.GET["palette"]
+
+    if "lanId" in request.GET:
+        lanId = request.GET["lanId"]
     else:
-        colorPalette = "none"
+        lanId = "000"
+    
+    landingData = landing(lanId)
+    propertyData = property(landingData["propertyId"])
+    agentData = agent(landingData["agentId"])
+
+    colorPalette = "paletteBS"
         
     if request.user.is_authenticated:
         loggedIn = True
@@ -18,7 +26,7 @@ def landingViews(request):
 
     appData = {}
     activeApp = True
-    appStyle = "/landing/css/landingbase.css"
+    appStyle = "/landing/css/landingbaseBS.css"
     prev = "/landing"
     boxTemplate = "./boxtemplate.html"
     appData.update({
@@ -29,5 +37,7 @@ def landingViews(request):
         "colorPalette": colorPalette,
         "prev": prev,
         "boxTemplate": boxTemplate,
+        "propertyData": propertyData,
+        "agentData": agentData,
     })
     return render(request, "landing/landingindex.html", appData)

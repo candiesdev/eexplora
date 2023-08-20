@@ -1,17 +1,25 @@
 {% extends "home/eexploraBase.html" %}
 
 {% block head %}
-{% include "home/eexploraHead.html" %}
+    {% include "home/eexploraHeadBS.html" %}
 {% endblock %}
 
 {% block header %}
-{% include "home/eexploraHeader.html" %}
+    {% include "home/eexploraHeaderBS.html" %}
 {% endblock %}
 
 {% block main %}
-{% include "./landingcontent.html" %}
+    {% if propertyId == "none" %}
+        {% include "./landinghomeBS.html" %}
+    {% else %}
+        {% include "./landingcontentBS.html" %}
+    {% endif %}
 {% endblock %}
 
 {% block footer %}
-{% include "home/eexploraFooter.html" %}
+    {% include "home/eexploraFooterBS.html" %}
+{% endblock %}
+
+{% block scripts %}
+    {% include "./landingscriptsBS.html" %}
 {% endblock %}
